@@ -7,7 +7,7 @@ function Chat() {
   const [ws, setWs] = useState(null);
 
   useEffect(() => {
-    const socket = new WebSocket('ws://localhost:8081');
+    const socket = new WebSocket(process.env.REACT_APP_WEBSOCKET_URL);
 
     socket.onopen = () => {
     };
